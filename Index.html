@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!-- Developed by Bushrajan Tubajan-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Quicksand:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dd5559ee21.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+
+    <!--     
+    body {
+        background-color: #000000;    
+
+        } -->
+    <style>
+        .customLink>a {
+            text-decoration: none;
+
+        }
+
+        #scrollContent {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            white-space: nowrap;
+        }
+
+        #scrollContent>div {
+            display: flex;
+            animation: textScrollEffect 10s infinite linear;
+        }
+
+        @keyframes textScrollEffect {
+            from {
+                transform: translateX(0%);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            z-index: -1000;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu:wght@300; 400;500;700&display=swap');
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .card {
+            display: flex;
+            position: relative;
+            width: 410px;
+            height: 460px;
+            font-size: 15px;
+            margin: 30px;
+            background: #287bff;
+            border-radius: 20px;
+            border-bottom-left-radius: 160px;
+            border-bottom-right-radius: 160px;
+            box-shadow: 0 15px 0 #fff, inset 0 -15px 0 rgba(255, 255, 255, 0.484), 0 25px 0 rgba(0, 0, 0, 0.742);
+            overflow: hidden;
+            align-items: center;
+            justify-content: top;
+        }
+
+        .card:nth-child(1) {
+            background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+        }
+
+        .card:nth-child(2) {
+            background: linear-gradient(to bottom, #ffec61, #f321d7);
+        }
+
+        .card:nth-child(3) {
+            background: linear-gradient(to bottom, #24ff72, #9a4eff);
+        }
+
+        .icon {
+
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 140px;
+            height: 150px;
+            background: #3c2846;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 0 #fff;
+            z-index: 1000;
+        }
+
+        .icon::before {
+
+            content: '';
+            position: absolute;
+            top: -18px;
+            Left: -50px;
+            width: 50px;
+            height: 50px;
+            border-top-right-radius: 50px;
+            box-shadow: 15px -15px 0 15px #3c2846;
+        }
+
+        .icon::after {
+
+            content: '';
+            position: absolute;
+            margin-top: -18px;
+            Right: -50px;
+            width: 50px;
+            height: 50px;
+            border-top-left-radius: 50px;
+            box-shadow: -10px 0 0 0px #3c2846;
+
+        }
+
+        .icon ion-icon {
+            color: #fff;
+            position: relative;
+            font-size: 6em;
+            z-index: 10000;
+            margin-top: 12px;
+            --ionicon-stroke-width: 24px;
+        }
+
+        .content {
+            position: absolute;
+            width: 100%;
+            padding: 10px;
+            padding-top: 160px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 1.75em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            color: #fff;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted plays-inline class="video">
+        <source src="./Imgs/1 (6).mp4" type="video/mp4">
+    </video>
+
+    <div class="body">
+        <!-- **************************NaV Bar****************************** -->
+        <div class="">
+            <div>
+                <div class="container-fluid " role="navigation">
+                    <div class="row text-center align-items-center g-0" style="margin-top: 1%;">
+                        <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none ms-auto">
+                            <div class="d-flex justify-content-around border-top border-3 border-bottom  border-dark">
+                                <div class="customLink "><a class="d-inline-block p-3 fs-5 fw-bolder"
+                                        href="./Index.html" style="color:#00bfff; letter-spacing: 0.1em;">Home</a></div>
+                                <div class="customLink"><a class="d-inline-block p-3 fs-5 fw-bolder" href="./About.html"
+                                        style="color:#00bfff; letter-spacing: 0.1em;">About</a></div>
+                                <div class="customLink"><a class="d-inline-block p-3 fs-5 fw-bolder"
+                                        href="./Activities.html"
+                                        style="color:#00bfff; letter-spacing: 0.1em;">Activities</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-1 mx-auto" style="max-width:190px;">
+                            <div class="text-center py-2">
+                                <img src="./Imgs/logo.jpg" alt="logo" height="100" width="160px">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none me-auto">
+                            <div class="d-flex justify-content-around border-top border-3 border-bottom border-dark">
+                                <div class="customLink"><a class="d-inline-block p-3 fs-5 fw-bolder"
+                                        href="./Gallery.html" style="color: #00bfff; letter-spacing: 0.1em;">Gallery</a>
+                                </div>
+                                <div class="customLink"><a class="d-inline-block p-3 fs-5 fw-bolder"
+                                        href="./Contact Us.html" style="color: #00bfff; letter-spacing: 0.1em;">Contact
+                                        Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom d-flex " style="margin-left: 5%;margin-right: 5%;">
+                <div>
+                    <div class="py-2 px-5 bg-success text-white" style="font-size: 30px;">Motto</div>
+                </div>
+                <div class="px-1" style="overflow:hidden">
+                    <div id="scrollContent" class="text-secondary text-black">
+                        <div> * * * * * ONE STEP ONE VOICE ONE FUTURE * * * * * ONE STEP ONE VOICE ONE FUTURE * * * * *
+                            ONE STEP ONE VOICE ONE FUTURE * * * * * ONE STEP ONE VOICE ONE FUTURE * * * * * </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid ">
+                <div class="row mx-3 mt-4">
+                    <div class="col">
+                        <div class="d-flex justify-content-center align-items-center border border-dark shadow-lg rounded-3"
+                            style="height:850px;background:url('./Imgs/bg.jpg') no-repeat;background-position:center;background-size:cover">
+                            <div class="text-center text-white">
+                                <h1 style="font-size: 40px;"><br><br><br><br><br><br>BETTER FUTURE FOR PAKISTAN</h1>
+                                <p style="margin-top:2%;margin-left:20%;margin-right:20%;margin-bottom:1%;"
+                                    class="text-center text-white fs-5">Pakistan should be confident of its own
+                                    abilities and optimistic about its future, given its size, location, and the
+                                    qualities of its people, who now number over 170 million. Yet it is not only
+                                    scholars and political analysts who are convinced that Pakistan faces an uncertain
+                                    future; many Pakistanis too are worried about the destiny of their country.</p>
+                                <div class="pt-3">
+                                    <button class="btn btn-outline-light btn-lg px-4 me-md-2 active"><a
+                                            class="text-decoration-none  text-dark" href="">Get
+                                            Started</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***********************Cards*************************** -->
+        <br><br><br><br>
+
+
+        <div class="container mt-5">
+            <div class="card">
+                <div class="icon">
+                    <ion-icon name="golf"></ion-icon>
+                </div>
+                <div class="content">
+                    <h2> Our Mission</h2>
+                    <p class="card-text px-1">Our business is built on the provision of four pillars of
+                        expertise which provide the services to meet the various needs and requirements of our
+                        clients.We apply formative design, implementation, results,
+                        impacts and sustainability of a project.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <ion-icon name="bar-chart"></ion-icon>
+                </div>
+                <div class="content">
+                    <h2> Our Expertise</h2>
+                    <p class="card-text px-1">Our business is built on the provision of four pillars of
+                        expertise which provide the services to meet the various needs and requirements of our
+                        clients.We apply formative design, implementation, results, impacts and sustainability of a
+                        project.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <ion-icon name="bulb"></ion-icon>
+                </div>
+
+                <div class="content">
+                    <h2> Our Vision</h2>
+                    <p class="card-text px-1">BFFP envisions an institutional process with the active
+                        involvement of all the stakeholders' rights form the conceptualization of planning and
+                        implementation
+                        phases, making the institutionalize process people oriented peoplecentered and gender
+                        sensitive.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ************************ CAROSOUL ****************************** -->
+    <br> <br> <br><br> <br><br> <br><br>
+    <center>
+        <h1>Slider of BFF_Pakistan</h1>
+    </center>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="margin:5% ;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Imgs/Img (1).jpg" class="d-block w-100" alt="img" height="620"
+                    style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (2).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (3).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item active">
+                <img src="./Imgs/Img (4).jpg" class="d-block w-100" alt="img" height="620"
+                    style="border-radius: 20px;" />
+            </div>
+
+            <div class="carousel-item">
+                <img src="./Imgs/Img (6).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (7).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+
+            <div class="carousel-item">
+                <img src="./Imgs/Img (10).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (11).jpg" class="d-block w-100" alt="img" height="620"
+                    style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (23).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (24).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (26).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+            <div class="carousel-item">
+                <img src="./Imgs/Img (27).jpg" height="620" class="d-block w-100" style="border-radius: 20px;" />
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+    <!-- *******************Page********************************* -->
+    <div class="container-fluid mt-5 ">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img class="img-fluid" src="./Imgs/Img (10).jpg "
+                        style=" border-radius:10%;height: 300px; width: 700px;" class="d-block mx-lg img-fluid"
+                        loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-2 mb-2">Child Rights & Youth <i
+                            class="fa-regular fa-face-smile-beam" style="color: #16dbfd;"></i>Development
+                    </h1>
+                    <p class="lead">“Child rights programming means using the principles of child rights to plan,
+                        implement and monitor programs with the verall goal of improving the position of children so
+                        that all boys and girls can fully enjoy their rights and can live in societies that
+                        acknowledge
+                        and respect children's rights."</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2 active"><a
+                                href="Activities.html" class="text-decoration-none text-light">Checkout Our
+                                Activities</a></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <!-- /***************************** videos section *********************************/ -->
+    <center>
+        <h1>BFF-Pakistan Videos </h1>
+    </center>
+
+    <div class="videos" style=" display: flex; margin:5%">
+        <div class="d-block w-50" style="padding:1%;box-shadow: -0px 10px 40px rgb(0, 0, 0);margin:1%;">
+            <video class="d-block w-100" width="400" muted loop autoplay>
+                <source src="./Imgs/v1 (1).mp4" type="video/mp4">
+            </video>
+
+        </div>
+        <div class="d-block w-50" style="padding:1%;box-shadow: -0px 10px 40px rgb(0, 0, 0);margin:1%;">
+            <video class="d-block w-100" width="400" muted loop autoplay>
+                <source src="./Imgs/v1 (2).mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="d-block w-50" style="padding:1%;box-shadow: -0px 10px 40px rgb(0, 0, 0);margin:1%;">
+            <video class="d-block w-100" width="400" muted loop autoplay>
+                <source src="./Imgs/v5.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+    <div class="videos" style=" display: flex; margin:5%">
+        <div class="d-block w-0" style="padding:1%;box-shadow: -0px 10px 40px rgb(0, 0, 0);margin:1%;">
+            <video class="d-block w-100" width="400" muted loop autoplay>
+                <source src="./Imgs/v1 (3).mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- /***************************** videos section  end *********************************/ -->
+
+    <br><br><br><br><br>
+
+    <!-- *************Footer********************************** -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block fs-1">
+                <span style="color: #00ddff;">Get connected with us on social networks:</span>
+            </div>
+
+            <div>
+                <a href="https://www.facebook.com/BFFPakistan" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f fa-2x" style="color: #ff009d;"></i>
+                </a>
+                <a href="https://www.instagram.com/betterfutureforpakistan/" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-instagram fa-2x" style="color: #ff009d;"></i>
+                </a>
+                <!-- <a href="" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-linkedin fa-2x" style="color: #ff009d;"></i>
+                </a> -->
+
+            </div>
+
+        </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14488.38191754926!2d67.138117!3d24.7921839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33b7a6a4c7679%3A0xded49f6e233e20d7!2sBaloch%20Mujahid%20Learning%20and%20Development%20Center!5e0!3m2!1sen!2s!4v1710002065032!5m2!1sen!2s"
+            width="100%" height="200px" style="border:15px;color:#000000" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="">
+            <div class="container text-justify-content-center text-md-start mt-5 ">
+                <!-- Grid row -->
+                <div class="row mt-3 ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h4 class="text-uppercase fw-bold mb-4" style="color: #00ddff;"><i
+                                class="fa fa-thin fa-hands-holding-child" style="color: #fa0764;"></i>
+                            Better Future For Pakistan</h4>
+                        <h5 class="text-lower  mb-4">Our business is built on the provision of four pillars of expertise
+                            which provide the services to meet the various needs and requirements of our clients.</h5>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2  mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4" style="color: #00ddff;"><i class="fa fa-link "
+                                style="color: #fa0764;"></i>
+                            Useful links
+                        </h4>
+                        <p>
+                            <a href="Index.html" class="text-reset" style="text-decoration: none;">Home</a>
+                        </p>
+                        <p>
+                            <a href="About.html" class="text-reset" style="text-decoration: none;">About</a>
+                        </p>
+                        <p>
+                            <a href="Contact Us.html" class="text-reset" style="text-decoration: none;">Contact Us</a>
+                        </p>
+                        <p>
+                            <a href="Gallery.html" class="text-reset" style="text-decoration: none;">Gallery</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-5 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4" style="color: #00ddff;"><i
+                                class="fa fa-duotone fa-id-card me-3" style="color: #fa0764;"></i>Contact</h4>
+                        <p class="px-2 fs-6 justify-content-end"><i class="fas fa-home me-3"></i>Baloch Mujahid
+                            Community Center, Ibrahim Hyderi, near PAF Kiet Korangi Creek Karachi</p>
+                        <p class="px-2 justify-content-end"><i
+                                class="fas fa-envelope me-3"></i>abduljabbar@bff-pakistan.com <strong>/</strong>
+                            maqboolahmed@bff-pakistan.com </p>
+                        <p class="px-2 justify-content-end"><i class="fas fa-phone me-3"></i>+92 332 8786028
+                            <strong>/</strong> +92 332
+                            3145554
+                        </p>
+                        <p class="px-2 justify-content-end"><i
+                                class="fa fa-facebook-f fa-map-location-dot me-3"></i>Better Future For Pakistan</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-reset fw-bold" href="index.html">BFFP.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer ends -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
